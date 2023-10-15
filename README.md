@@ -109,3 +109,14 @@ C --> D[Usuário clica em "Logar"]
 D --> |Validação|
 D --> |Nome de Usuário vazio| E[Exibir mensagens de erro: Insira o Nome de Usuário]
 E --> F[Fim]
+
+
+@startuml
+:Usuario insere Nome de Usuario;
+:Usuario insere Senha;
+if (Validacao) then (Senha vazia?)
+  :Exibir mensagem de erro: Insira a Senha;
+else (Nome de Usuario vazio?)
+  :Exibir mensagem de erro: Insira o Nome de Usuario;
+endif
+@enduml
