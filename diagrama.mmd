@@ -1,0 +1,33 @@
+# Fluxograma da Tela de Login
+
+```mermaid
+graph TD
+A[Tela de Login] --> B[Usuário insere Nome de Usuário]
+B --> C[Usuário insere Senha]
+C --> D[Usuário clica em "Logar"]
+D --> E{Validação}
+
+E --> |Senha vazia| F[Exibir mensagem de erro: Insira a Senha]
+E --> |Nome de Usuário vazio| G[Exibir mensagem de erro: Insira o Nome de Usuário]
+
+## Cenário 1: Usuário Inserindo Apenas a Senha
+
+```mermaid
+graph TD
+A[Tela de Login] --> B[Usuário insere Nome de Usuário]
+B --> C[Usuário insere Senha]
+C --> D[Usuário clica em "Logar"]
+
+D --> |Validação|
+D --> |Senha vazia| E[Exibir mensagem de erro: Insira a Senha]
+E --> F[Fim]
+
+
+graph TD
+A[Tela de Login] --> B[Usuário insere Nome de Usuário]
+B --> C[Usuário insere Senha]
+C --> D[Usuário clica em "Logar"]
+
+D --> |Validação|
+D --> |Nome de Usuário vazio| E[Exibir mensagem de erro: Insira o Nome de Usuário]
+E --> F[Fim]
