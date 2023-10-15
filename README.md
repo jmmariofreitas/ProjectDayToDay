@@ -106,7 +106,7 @@ B --> C[Usuário insere Senha]
 C --> D[Usuário clica em "Logar"]
 
 D --> |Validação|
-D --> |Nome de Usuário vazio| E[Exibir mensagem de erro: Insira o Nome de Usuário]
+D --> |Nome de Usuário vazio| E[Exibir mensagens de erro: Insira o Nome de Usuário]
 E --> F[Fim]
 
 
