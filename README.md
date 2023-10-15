@@ -73,3 +73,19 @@ Funcionalidade: Login de Usuário
     Quando ele insere credenciais inválidas
     E clica no botão de login
     Então ele deve ver uma mensagem de erro
+
+
+```markdown
+```mermaid
+
+graph TD
+A[Tela de Login] --> B[Usuário insere Nome de Usuário]
+B --> C[Usuário insere Senha]
+C --> D[Usuário clica em "Logar"]
+D --> E{Validação}
+
+E --> |Senha vazia| F[Exibir mensagem de erro: Insira a Senha]
+E --> |Nome de Usuário vazio| G[Exibir mensagem de erro: Insira o Nome de Usuário]
+
+
+
