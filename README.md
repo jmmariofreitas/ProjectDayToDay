@@ -53,7 +53,6 @@
 ![Diagrama](https://www.plantuml.com/plantuml/png/ZO-n3e9044Jx-uefuHUWaCR2niPeltg3RCBT9RjWZ5yl8Tf8OxN9pkJDJEUJs3IdCJHddyMqGBFJY6D9H2G-xtPZE34FqWRjKLrar2WtAJMcWHdLgk4XBvLT7O1c_zIh6XApovq9aQ1PQN38hYQGBuwZ4zLF-4eg_v7AjZbpr3vqorc6lW40)
 
 
-![Diagrama de Fluxo]([https://www.planttext.com/plantuml/img/SypDJyCm4Z3HiX9BqkmrKd1e3rKbLFG0w0](https://www.plantuml.com/plantuml/png/ZO-n3e9044Jx-uefuHUWaCR2niPeltg3RCBT9RjWZ5yl8Tf8OxN9pkJDJEUJs3IdCJHddyMqGBFJY6D9H2G-xtPZE34FqWRjKLrar2WtAJMcWHdLgk4XBvLT7O1c_zIh6XApovq9aQ1PQN38hYQGBuwZ4zLF-4eg_v7AjZbpr3vqorc6lW40))
 
 **Casos de Teste usando Step-by-Step**:
 1. Abra a tela de login.
@@ -77,58 +76,3 @@ Funcionalidade: Login de Usuário
     Quando ele insere credenciais inválidas
     E clica no botão de login
     Então ele deve ver uma mensagem de erro
-
-
-# Fluxograma da Tela de Login
-
-```mermaid
-graph TD
-A[Tela de Login] --> B[Usuário insere Nome de Usuário]
-B --> C[Usuário insere Senha]
-C --> D[Usuário clica em "Logar"]
-D --> E{Validação}
-
-E --> |Senha vazia| F[Exibir mensagem de erro: Insira a Senha]
-E --> |Nome de Usuário vazio| G[Exibir mensagem de erro: Insira o Nome de Usuário]
-
-## Cenário 1: Usuário Inserindo Apenas a Senha
-
-```mermaid
-graph TD
-A[Tela de Login] --> B[Usuário insere Nome de Usuário]
-B --> C[Usuário insere Senha]
-C --> D[Usuário clica em "Logar"]
-
-D --> |Validação|
-D --> |Senha vazia| E[Exibir mensagem de erro: Insira a Senha]
-E --> F[Fim]
-
-
-graph TD
-A[Tela de Login] --> B[Usuário insere Nome de Usuário]
-B --> C[Usuário insere Senha]
-C --> D[Usuário clica em "Logar"]
-
-D --> |Validação|
-D --> |Nome de Usuário vazio| E[Exibir mensagens de erro: Insira o Nome de Usuário]
-E --> F[Fim]
-
-
-@startuml
-:Usuario insere Nome de Usuario;
-:Usuario insere Senha;
-if (Validacao) then (Senha vazia?)
-  :Exibir mensagem de erro: Insira a Senha;
-else (Nome de Usuario vazio?)
-  :Exibir mensagem de erro: Insira o Nome de Usuario;
-endif
-@enduml
-
-
-```plantuml
-@startuml
-Bob -> Alice : Olá!
-Alice -> Bob : Olá!
-@enduml
-
-
